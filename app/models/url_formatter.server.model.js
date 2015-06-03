@@ -1,5 +1,5 @@
 module.exports = {
-  addHttpIfNoPresent: function(url) {
+  addHttpIfNotPresent: function(url) {
     if (!url) {
       return url;
     } else {

@@ -17,8 +17,8 @@ var UserSchema = new Schema({
     },
     website: {
       type: String,
-      set: urlFormatter.addHttpIfNoPresent,
-      get: urlFormatter.addHttpIfNoPresent
+      set: urlFormatter.addHttpIfNotPresent,
+      get: urlFormatter.addHttpIfNotPresent
     }
   });
 
