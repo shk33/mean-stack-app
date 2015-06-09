@@ -53,7 +53,6 @@ UserSchema.virtual('fullName').get(function() {
 /*UserSchema.methods.authenticate = function(password) {
 return this.password === password;
 };*/
-
 UserSchema.post('save', function(next) {
   if(this.isNew) {
     console.log('A new user was created.');
