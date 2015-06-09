@@ -25,6 +25,10 @@ var UserSchema = new Schema({
       type: String,
       set: urlFormatter.addHttpIfNotPresent,
       get: urlFormatter.addHttpIfNotPresent
+    },
+    role: {
+      type: String,
+      enum: ['Admin', 'Owner', 'User']
     }
   });
 
