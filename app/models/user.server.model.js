@@ -7,7 +7,8 @@ var UserSchema = new Schema({
     lastName: String,
     email: {
      type: String,
-     index: true 
+     index: true,
+     match: /.+\@.+\..+/
     },
     username: {
       type: String,
