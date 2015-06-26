@@ -5,7 +5,7 @@
   <title> <%= title %> </title>
 </head>
 <body>
-  <% if (userFullName) { %>
+  <% if (user) { %>
     <h2>Hello <%= userFullName %></h2>
     <a href="/signout">Sign Out</a>
   <% } else { %>
@@ -16,6 +16,10 @@
   <% } %>
 
   <section ng-view></section>
+
+  <script type="text/javascript">
+    window.user = <%- user || 'null' %>;
+  </script>
 
   <!-- Angular Core libraries -->
   <script type="text/javascript" src="/lib/angular/angular.js"></script>
