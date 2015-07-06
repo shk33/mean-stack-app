@@ -5,16 +5,6 @@
   <title> <%= title %> </title>
 </head>
 <body>
-  <% if (user) { %>
-    <h2>Hello <%= user.fullName %></h2>
-    <a href="/signout">Sign Out</a>
-  <% } else { %>
-    <a href="/signup">Sign Up</a>
-    <a href="/signin">Sign In</a>
-    <a href="/oauth/facebook">Sign in with Facebook</a>
-    <a href="/oauth/twitter">Sign in with Twitter</a>
-  <% } %>
-
   <section ng-view></section>
 
   <script type="text/javascript">
@@ -24,7 +14,14 @@
   <!-- Angular Core libraries -->
   <script type="text/javascript" src="/lib/angular/angular.js"></script>
   <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
 
+  <!-- Articles js -->
+  <script type="text/javascript" src="/articles/articles.client.module.js"></script>
+  <script type="text/javascript" src="/articles/controllers/articles.client.controller.js"></script>
+  <script type="text/javascript" src="/articles/services/articles.client.service.js"></script>
+  <script type="text/javascript" src="/articles/config/articles.client.routes.js"></script>
+  
   <!-- Angular App js -->
   <script type="text/javascript" src="/example/example.client.module.js"></script>
   <script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>

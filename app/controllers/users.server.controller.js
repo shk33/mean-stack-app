@@ -21,6 +21,16 @@ var getErrorMessage = function(err) {
   return message;
 };
 
+exports.requiresLogin = function (req ,res ,next) {
+  if (!req.isAuthenticated()) {
+    return res.status(401).send({
+      message: 'User is not logged in'
+    });
+  }
+
+  next();
+};
+
 exports.renderSignin = function(req, res, next) {
   if (!req.user) {
     res.render('signin', {
