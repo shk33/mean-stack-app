@@ -7,3 +7,8 @@ For Testing Express code just run this command
 ```
 NODE_ENV=test mocha --reporter spec app/tests
 ``` 
+
+For Testing Angular code just run this command
+```
+NODE_ENV=test karma start
+``` 
